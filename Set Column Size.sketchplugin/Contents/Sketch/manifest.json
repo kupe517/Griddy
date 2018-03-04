@@ -98,21 +98,26 @@
 		}
 	],
 	"menu": {
-		"title": "Set Column Size",
+		"title": "Griddy",
 		"items": [
-			"columnsSet1",
-			"columnsSet2",
-			"columnsSet3",
-			"columnsSet4",
-			"columnsSet5",
-			"columnsSet6",
-			"columnsSet7",
-			"columnsSet8",
-			"columnsSet9",
-			"columnsSet10",
-			"columnsSet11",
-			"columnsSet12"
-		]
+            {
+                "title": "Sizing",
+                "items": [
+									"columnsSet1",
+									"columnsSet2",
+									"columnsSet3",
+									"columnsSet4",
+									"columnsSet5",
+									"columnsSet6",
+									"columnsSet7",
+									"columnsSet8",
+									"columnsSet9",
+									"columnsSet10",
+									"columnsSet11",
+									"columnsSet12"
+								]
+						}
+					]
 	},
 	"identifier": "com.kupe517.setcolumsize",
 	"version": "1.0.0",
