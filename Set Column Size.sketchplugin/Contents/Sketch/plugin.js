@@ -1,21 +1,34 @@
-var artboard;
-var layoutGrid;
-var gridWidth;
-var columns;
-var columnsWidth;
-var gutterWidth;
-var oneColumn;
-var layers;
+var sketch, artboard, layoutGrid, gridWidth, columns, columnsWidth, gutterWidth, oneColumn, layers, userDefaults;
 
 function setVariables(context){
+	sketch = context.api();
+	userDefaults = NSUserDefaults.alloc().initWithSuiteName("com.griddy.sketch");
 	artboard = context.document.currentPage().currentArtboard();
 	layoutGrid = artboard.layout(); // class: MSLayoutGrid
-	gridWidth = layoutGrid.totalWidth();
-	columns = layoutGrid.numberOfColumns();
-	columnsWidth = Math.round(layoutGrid.columnWidth());
-	gutterWidth = Math.round(layoutGrid.gutterWidth());
-	oneColumn = Math.round((gridWidth - ((columns - 1 ) * gutterWidth)) / columns);
+	if(layoutGrid){
+		gridWidth = layoutGrid.totalWidth();
+		columns = layoutGrid.numberOfColumns();
+		columnsWidth = Math.round(layoutGrid.columnWidth());
+		gutterWidth = Math.round(layoutGrid.gutterWidth());
+		oneColumn = Math.round((gridWidth - ((columns - 1 ) * gutterWidth)) / columns);
+	}else{
+		gridWidth = userDefaults.objectForKey("gridWidth");
+		columns = userDefaults.objectForKey("columns");
+		columnsWidth = userDefaults.objectForKey("columnsWidth");
+		gutterWidth = userDefaults.objectForKey("gutterWidth");
+		oneColumn = userDefaults.objectForKey("oneColumn");
+	}
+
 	layers = context.selection;
+
+	// Save Grid settings
+	[userDefaults setObject:gridWidth forKey:"gridWidth"];
+	[userDefaults setObject:columns forKey:"columns"];
+	[userDefaults setObject:columnsWidth forKey:"columnsWidth"];
+	[userDefaults setObject:gutterWidth forKey:"gutterWidth"];
+	[userDefaults setObject:oneColumn forKey:"oneColumn"];
+	userDefaults.synchronize();
+
 }
 
 function setColumns(val){
