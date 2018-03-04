@@ -1,0 +1,123 @@
+{
+	"author": "Brian Kuperman",
+	"commands": [{
+			"script": "plugin.js",
+			"name": "1 Column",
+			"handlers": {
+				"run": "columnsSet1"
+			},
+			"identifier": "columnsSet1"
+		},
+		{
+			"script": "plugin.js",
+			"name": "2 Columns",
+			"handlers": {
+				"run": "columnsSet2"
+			},
+			"identifier": "columnsSet2"
+		},
+		{
+			"script": "plugin.js",
+			"name": "3 Columns",
+			"handlers": {
+				"run": "columnsSet3"
+			},
+			"identifier": "columnsSet3"
+		},
+		{
+			"script": "plugin.js",
+			"name": "4 Columns",
+			"handlers": {
+				"run": "columnsSet4"
+			},
+			"identifier": "columnsSet4"
+		},
+		{
+			"script": "plugin.js",
+			"name": "5 Columns",
+			"handlers": {
+				"run": "columnsSet5"
+			},
+			"identifier": "columnsSet5"
+		},
+		{
+			"script": "plugin.js",
+			"name": "6 Columns",
+			"handlers": {
+				"run": "columnsSet6"
+			},
+			"identifier": "columnsSet6"
+		},
+		{
+			"script": "plugin.js",
+			"name": "7 Columns",
+			"handlers": {
+				"run": "columnsSet7"
+			},
+			"identifier": "columnsSet7"
+		},
+		{
+			"script": "plugin.js",
+			"name": "8 Columns",
+			"handlers": {
+				"run": "columnsSet8"
+			},
+			"identifier": "columnsSet8"
+		},
+		{
+			"script": "plugin.js",
+			"name": "9 Columns",
+			"handlers": {
+				"run": "columnsSet9"
+			},
+			"identifier": "columnsSet9"
+		},
+		{
+			"script": "plugin.js",
+			"name": "10 Columns",
+			"handlers": {
+				"run": "columnsSet10"
+			},
+			"identifier": "columnsSet10"
+		},
+		{
+			"script": "plugin.js",
+			"name": "11 Columns",
+			"handlers": {
+				"run": "columnsSet11"
+			},
+			"identifier": "columnsSet11"
+		},
+		{
+			"script": "plugin.js",
+			"name": "12 Columns",
+			"handlers": {
+				"run": "columnsSet12"
+			},
+			"identifier": "columnsSet12"
+		}
+	],
+	"menu": {
+		"title": "Set Column Size",
+		"items": [
+			"columnsSet1",
+			"columnsSet2",
+			"columnsSet3",
+			"columnsSet4",
+			"columnsSet5",
+			"columnsSet6",
+			"columnsSet7",
+			"columnsSet8",
+			"columnsSet9",
+			"columnsSet10",
+			"columnsSet11",
+			"columnsSet12"
+		]
+	},
+	"identifier": "com.kupe517.setcolumsize",
+	"version": "1.0.0",
+	"description": "Change the width of the selected column to a selected width of your grid layout",
+	"authorEmail": "brian@rekupe.com",
+	"homepage": "https://github.com/kupe517",
+	"name": "Set Column Size"
+}
