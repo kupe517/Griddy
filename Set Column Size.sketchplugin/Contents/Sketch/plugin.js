@@ -42,6 +42,12 @@ function setColumns(val){
     return;
 }
 
+/*
+|--------------------------------------------------------------------------
+| Object Sizing
+|--------------------------------------------------------------------------
+*/
+
 var columnsSet1 = function(context) {
 	setVariables(context);
 	setColumns(1);
@@ -100,4 +106,20 @@ var columnsSet11 = function(context) {
 var columnsSet12 = function(context) {
 	setVariables(context);
 	setColumns(12);
+};
+
+
+/*
+|--------------------------------------------------------------------------
+| Object Alignment
+|--------------------------------------------------------------------------
+*/
+
+function alignColumns(val){
+	log(artboard.width);
+}
+
+var columnsAlign1 = function(context){
+	setVariables(context);
+	alignColumns(1);
 };

@@ -95,6 +95,14 @@
 				"run": "columnsSet12"
 			},
 			"identifier": "columnsSet12"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 1",
+			"handlers": {
+				"run": "columnsAlign1"
+			},
+			"identifier": "columnsAlign1"
 		}
 	],
 	"menu": {
@@ -115,6 +123,23 @@
 									"columnsSet10",
 									"columnsSet11",
 									"columnsSet12"
+								]
+						},
+						{
+                "title": "Align to..",
+                "items": [
+									"columnsAlign1",
+									"columnsAlign2",
+									"columnsAlign3",
+									"columnsAlign4",
+									"columnsAlign5",
+									"columnsAlign6",
+									"columnsAlign7",
+									"columnsAlign8",
+									"columnsAlign9",
+									"columnsAlign10",
+									"columnsAlign11",
+									"columnsAlign12"
 								]
 						}
 					]
