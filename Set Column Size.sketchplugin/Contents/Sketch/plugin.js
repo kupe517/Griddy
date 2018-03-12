@@ -1,21 +1,35 @@
-var artboard;
-var layoutGrid;
-var gridWidth;
-var columns;
-var columnsWidth;
-var gutterWidth;
-var oneColumn;
-var layers;
+var sketch, artboard, artboardWidth, layoutGrid, gridWidth, columns, columnsWidth, gutterWidth, oneColumn, layers, userDefaults;
 
 function setVariables(context){
+	sketch = context.api();
+	userDefaults = NSUserDefaults.alloc().initWithSuiteName("com.griddy.sketch");
 	artboard = context.document.currentPage().currentArtboard();
+	artboardWidth = artboard.frame().width();
 	layoutGrid = artboard.layout(); // class: MSLayoutGrid
-	gridWidth = layoutGrid.totalWidth();
-	columns = layoutGrid.numberOfColumns();
-	columnsWidth = Math.round(layoutGrid.columnWidth());
-	gutterWidth = Math.round(layoutGrid.gutterWidth());
-	oneColumn = Math.round((gridWidth - ((columns - 1 ) * gutterWidth)) / columns);
+	if(layoutGrid){
+		gridWidth = layoutGrid.totalWidth();
+		columns = layoutGrid.numberOfColumns();
+		columnsWidth = Math.round(layoutGrid.columnWidth());
+		gutterWidth = Math.round(layoutGrid.gutterWidth());
+		oneColumn = Math.round((gridWidth - ((columns - 1 ) * gutterWidth)) / columns);
+	}else{
+		gridWidth = userDefaults.objectForKey("gridWidth");
+		columns = userDefaults.objectForKey("columns");
+		columnsWidth = userDefaults.objectForKey("columnsWidth");
+		gutterWidth = userDefaults.objectForKey("gutterWidth");
+		oneColumn = userDefaults.objectForKey("oneColumn");
+	}
+
 	layers = context.selection;
+
+	// Save Grid settings
+	[userDefaults setObject:gridWidth forKey:"gridWidth"];
+	[userDefaults setObject:columns forKey:"columns"];
+	[userDefaults setObject:columnsWidth forKey:"columnsWidth"];
+	[userDefaults setObject:gutterWidth forKey:"gutterWidth"];
+	[userDefaults setObject:oneColumn forKey:"oneColumn"];
+	userDefaults.synchronize();
+
 }
 
 function setColumns(val){
@@ -28,6 +42,12 @@ function setColumns(val){
 
     return;
 }
+
+/*
+|--------------------------------------------------------------------------
+| Object Sizing
+|--------------------------------------------------------------------------
+*/
 
 var columnsSet1 = function(context) {
 	setVariables(context);
@@ -88,3 +108,127 @@ var columnsSet12 = function(context) {
 	setVariables(context);
 	setColumns(12);
 };
+
+
+/*
+|--------------------------------------------------------------------------
+| Object Alignment
+|--------------------------------------------------------------------------
+*/
+
+function alignColumns(val){
+	var col1_x = Number((artboardWidth - gridWidth) / 2);
+	var xLoc;
+	
+	if(val == 1){
+		xLoc = col1_x;
+	}else{
+		xLoc = (columnsWidth + gutterWidth) * (val - 1) + col1_x;
+	}
+
+	var sketch = require('sketch/dom');
+	var document = sketch.Document.getSelectedDocument();
+	var selection = document.selectedLayers;
+
+	for(var i = 0 ; i < selection.layers.length ; ++i){
+		var layer = selection.layers[i];
+		var layerY = layer.frame.y;
+		positionInArtboard(layer, xLoc, layerY);
+	}
+}
+
+var columnsAlign1 = function(context){
+	setVariables(context);
+	alignColumns(1);
+};
+
+var columnsAlign2 = function(context){
+	setVariables(context);
+	alignColumns(2);
+};
+
+var columnsAlign3 = function(context){
+	setVariables(context);
+	alignColumns(3);
+};
+
+var columnsAlign4 = function(context){
+	setVariables(context);
+	alignColumns(4);
+};
+
+var columnsAlign5 = function(context){
+	setVariables(context);
+	alignColumns(5);
+};
+
+var columnsAlign6 = function(context){
+	setVariables(context);
+	alignColumns(6);
+};
+
+var columnsAlign7 = function(context){
+	setVariables(context);
+	alignColumns(7);
+};
+
+var columnsAlign8 = function(context){
+	setVariables(context);
+	alignColumns(8);
+};
+
+var columnsAlign9 = function(context){
+	setVariables(context);
+	alignColumns(9);
+};
+
+var columnsAlign10 = function(context){
+	setVariables(context);
+	alignColumns(10);
+};
+
+var columnsAlign11 = function(context){
+	setVariables(context);
+	alignColumns(11);
+};
+
+var columnsAlign12 = function(context){
+	setVariables(context);
+	alignColumns(12);
+};
+
+/**
+ Move the selected layer to x & y coordinates relative to the artboard
+**/
+
+var sketch = require('sketch/dom');
+var document = sketch.Document.getSelectedDocument();
+var layer = document.selectedLayers.layers[0];
+
+function parentOffsetInArtboard (layer) {
+  var offset = {x: 0, y: 0};
+  var parent = layer.parent;
+  while (parent.name && parent.type !== 'Artboard') {
+    offset.x += parent.frame.x;
+    offset.y += parent.frame.y;
+    parent = parent.parent;
+  }
+  return offset;
+}
+
+function positionInArtboard (layer, x, y) {
+  var parentOffset = parentOffsetInArtboard(layer);
+  var newFrame = new sketch.Rectangle(layer.frame);
+  newFrame.x = x - parentOffset.x;
+  newFrame.y = y - parentOffset.y;
+  layer.frame = newFrame;
+  updateParentFrames(layer);
+}
+
+function updateParentFrames(layer){
+  var parent = layer.parent;
+  while (parent && parent.name && parent.type !== 'Artboard') {
+    parent.adjustToFit();
+    parent = parent.parent;
+  }
+}

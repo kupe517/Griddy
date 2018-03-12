@@ -95,24 +95,142 @@
 				"run": "columnsSet12"
 			},
 			"identifier": "columnsSet12"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 1",
+			"handlers": {
+				"run": "columnsAlign1"
+			},
+			"identifier": "columnsAlign1"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 2",
+			"handlers": {
+				"run": "columnsAlign2"
+			},
+			"identifier": "columnsAlign2"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 3",
+			"handlers": {
+				"run": "columnsAlign3"
+			},
+			"identifier": "columnsAlign3"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 4",
+			"handlers": {
+				"run": "columnsAlign4"
+			},
+			"identifier": "columnsAlign4"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 5",
+			"handlers": {
+				"run": "columnsAlign5"
+			},
+			"identifier": "columnsAlign5"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 6",
+			"handlers": {
+				"run": "columnsAlign6"
+			},
+			"identifier": "columnsAlign6"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 7",
+			"handlers": {
+				"run": "columnsAlign7"
+			},
+			"identifier": "columnsAlign7"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 8",
+			"handlers": {
+				"run": "columnsAlign8"
+			},
+			"identifier": "columnsAlign8"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 9",
+			"handlers": {
+				"run": "columnsAlign9"
+			},
+			"identifier": "columnsAlign9"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 10",
+			"handlers": {
+				"run": "columnsAlign10"
+			},
+			"identifier": "columnsAlign10"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 1",
+			"handlers": {
+				"run": "columnsAlign1"
+			},
+			"identifier": "columnsAlign1"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 12",
+			"handlers": {
+				"run": "columnsAlign12"
+			},
+			"identifier": "columnsAlign12"
 		}
 	],
 	"menu": {
-		"title": "Set Column Size",
+		"title": "Griddy",
 		"items": [
-			"columnsSet1",
-			"columnsSet2",
-			"columnsSet3",
-			"columnsSet4",
-			"columnsSet5",
-			"columnsSet6",
-			"columnsSet7",
-			"columnsSet8",
-			"columnsSet9",
-			"columnsSet10",
-			"columnsSet11",
-			"columnsSet12"
-		]
+            {
+                "title": "Sizing",
+                "items": [
+									"columnsSet1",
+									"columnsSet2",
+									"columnsSet3",
+									"columnsSet4",
+									"columnsSet5",
+									"columnsSet6",
+									"columnsSet7",
+									"columnsSet8",
+									"columnsSet9",
+									"columnsSet10",
+									"columnsSet11",
+									"columnsSet12"
+								]
+						},
+						{
+                "title": "Align to..",
+                "items": [
+									"columnsAlign1",
+									"columnsAlign2",
+									"columnsAlign3",
+									"columnsAlign4",
+									"columnsAlign5",
+									"columnsAlign6",
+									"columnsAlign7",
+									"columnsAlign8",
+									"columnsAlign9",
+									"columnsAlign10",
+									"columnsAlign11",
+									"columnsAlign12"
+								]
+						}
+					]
 	},
 	"identifier": "com.kupe517.setcolumsize",
 	"version": "1.0.0",
