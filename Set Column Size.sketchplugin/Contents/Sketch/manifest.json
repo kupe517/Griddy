@@ -103,6 +103,94 @@
 				"run": "columnsAlign1"
 			},
 			"identifier": "columnsAlign1"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 2",
+			"handlers": {
+				"run": "columnsAlign2"
+			},
+			"identifier": "columnsAlign2"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 3",
+			"handlers": {
+				"run": "columnsAlign3"
+			},
+			"identifier": "columnsAlign3"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 4",
+			"handlers": {
+				"run": "columnsAlign4"
+			},
+			"identifier": "columnsAlign4"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 5",
+			"handlers": {
+				"run": "columnsAlign5"
+			},
+			"identifier": "columnsAlign5"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 6",
+			"handlers": {
+				"run": "columnsAlign6"
+			},
+			"identifier": "columnsAlign6"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 7",
+			"handlers": {
+				"run": "columnsAlign7"
+			},
+			"identifier": "columnsAlign7"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 8",
+			"handlers": {
+				"run": "columnsAlign8"
+			},
+			"identifier": "columnsAlign8"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 9",
+			"handlers": {
+				"run": "columnsAlign9"
+			},
+			"identifier": "columnsAlign9"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 10",
+			"handlers": {
+				"run": "columnsAlign10"
+			},
+			"identifier": "columnsAlign10"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 1",
+			"handlers": {
+				"run": "columnsAlign1"
+			},
+			"identifier": "columnsAlign1"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Column 12",
+			"handlers": {
+				"run": "columnsAlign12"
+			},
+			"identifier": "columnsAlign12"
 		}
 	],
 	"menu": {
