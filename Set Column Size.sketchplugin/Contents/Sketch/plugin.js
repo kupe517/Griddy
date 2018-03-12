@@ -1,9 +1,10 @@
-var sketch, artboard, layoutGrid, gridWidth, columns, columnsWidth, gutterWidth, oneColumn, layers, userDefaults;
+var sketch, artboard, artboardWidth, layoutGrid, gridWidth, columns, columnsWidth, gutterWidth, oneColumn, layers, userDefaults;
 
 function setVariables(context){
 	sketch = context.api();
 	userDefaults = NSUserDefaults.alloc().initWithSuiteName("com.griddy.sketch");
 	artboard = context.document.currentPage().currentArtboard();
+	artboardWidth = artboard.frame().width();
 	layoutGrid = artboard.layout(); // class: MSLayoutGrid
 	if(layoutGrid){
 		gridWidth = layoutGrid.totalWidth();
@@ -116,7 +117,13 @@ var columnsSet12 = function(context) {
 */
 
 function alignColumns(val){
-	log(artboard.width);
+	log(artboardWidth);
+	log(gridWidth);
+	var colLoc = (artboardWidth - gridWidth) / 2;
+	log(colLoc);
+	for(var i = 0 ; i < layers.length ; ++i){
+		layers[i].frame().x = colLoc;
+	}
 }
 
 var columnsAlign1 = function(context){
