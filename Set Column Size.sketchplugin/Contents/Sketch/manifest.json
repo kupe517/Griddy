@@ -2,7 +2,7 @@
 	"author": "Brian Kuperman",
 	"commands": [{
 			"script": "plugin.js",
-			"name": "1 Column",
+			"name": "Size to 1 Column",
 			"handlers": {
 				"run": "columnsSet1"
 			},
@@ -10,7 +10,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "2 Columns",
+			"name": "Size to 2 Columns",
 			"handlers": {
 				"run": "columnsSet2"
 			},
@@ -18,7 +18,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "3 Columns",
+			"name": "Size to 3 Columns",
 			"handlers": {
 				"run": "columnsSet3"
 			},
@@ -26,7 +26,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "4 Columns",
+			"name": "Size to 4 Columns",
 			"handlers": {
 				"run": "columnsSet4"
 			},
@@ -34,7 +34,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "5 Columns",
+			"name": "Size to 5 Columns",
 			"handlers": {
 				"run": "columnsSet5"
 			},
@@ -42,7 +42,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "6 Columns",
+			"name": "Size to 6 Columns",
 			"handlers": {
 				"run": "columnsSet6"
 			},
@@ -50,7 +50,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "7 Columns",
+			"name": "Size to 7 Columns",
 			"handlers": {
 				"run": "columnsSet7"
 			},
@@ -58,7 +58,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "8 Columns",
+			"name": "Size to 8 Columns",
 			"handlers": {
 				"run": "columnsSet8"
 			},
@@ -66,7 +66,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "9 Columns",
+			"name": "Size to 9 Columns",
 			"handlers": {
 				"run": "columnsSet9"
 			},
@@ -74,7 +74,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "10 Columns",
+			"name": "Size to 10 Columns",
 			"handlers": {
 				"run": "columnsSet10"
 			},
@@ -82,7 +82,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "11 Columns",
+			"name": "Size to 11 Columns",
 			"handlers": {
 				"run": "columnsSet11"
 			},
@@ -90,7 +90,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "12 Columns",
+			"name": "Size to 12 Columns",
 			"handlers": {
 				"run": "columnsSet12"
 			},
@@ -98,7 +98,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "Column 1",
+			"name": "Align to Column 1",
 			"handlers": {
 				"run": "columnsAlign1"
 			},
@@ -106,7 +106,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "Column 2",
+			"name": "Align to Column 2",
 			"handlers": {
 				"run": "columnsAlign2"
 			},
@@ -114,7 +114,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "Column 3",
+			"name": "Align to Column 3",
 			"handlers": {
 				"run": "columnsAlign3"
 			},
@@ -122,7 +122,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "Column 4",
+			"name": "Align to Column 4",
 			"handlers": {
 				"run": "columnsAlign4"
 			},
@@ -130,7 +130,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "Column 5",
+			"name": "Align to Column 5",
 			"handlers": {
 				"run": "columnsAlign5"
 			},
@@ -138,7 +138,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "Column 6",
+			"name": "Align to Column 6",
 			"handlers": {
 				"run": "columnsAlign6"
 			},
@@ -146,7 +146,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "Column 7",
+			"name": "Align to Column 7",
 			"handlers": {
 				"run": "columnsAlign7"
 			},
@@ -154,7 +154,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "Column 8",
+			"name": "Align to Column 8",
 			"handlers": {
 				"run": "columnsAlign8"
 			},
@@ -162,7 +162,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "Column 9",
+			"name": "Align to Column 9",
 			"handlers": {
 				"run": "columnsAlign9"
 			},
@@ -170,7 +170,7 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "Column 10",
+			"name": "Align to Column 10",
 			"handlers": {
 				"run": "columnsAlign10"
 			},
@@ -178,15 +178,15 @@
 		},
 		{
 			"script": "plugin.js",
-			"name": "Column 1",
+			"name": "Align to Column 11",
 			"handlers": {
-				"run": "columnsAlign1"
+				"run": "columnsAlign11"
 			},
-			"identifier": "columnsAlign1"
+			"identifier": "columnsAlign11"
 		},
 		{
 			"script": "plugin.js",
-			"name": "Column 12",
+			"name": "Align to Column 12",
 			"handlers": {
 				"run": "columnsAlign12"
 			},
@@ -232,10 +232,10 @@
 						}
 					]
 	},
-	"identifier": "com.kupe517.setcolumsize",
+	"identifier": "com.kupe517.griddy",
 	"version": "1.0.0",
-	"description": "Change the width of the selected column to a selected width of your grid layout",
+	"description": "Change the width of the selected object to match columns width or align to a specific column",
 	"authorEmail": "brian@rekupe.com",
 	"homepage": "https://github.com/kupe517",
-	"name": "Set Column Size"
+	"name": "Griddy"
 }

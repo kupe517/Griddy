@@ -9,9 +9,12 @@ function setVariables(context){
 	if(layoutGrid){
 		gridWidth = layoutGrid.totalWidth();
 		columns = layoutGrid.numberOfColumns();
-		columnsWidth = Math.round(layoutGrid.columnWidth());
-		gutterWidth = Math.round(layoutGrid.gutterWidth());
-		oneColumn = Math.round((gridWidth - ((columns - 1 ) * gutterWidth)) / columns);
+		columnsWidth = (layoutGrid.columnWidth()).toFixed(2);
+		gutterWidth = (layoutGrid.gutterWidth()).toFixed(2);
+		oneColumn = ((gridWidth - ((columns - 1 ) * gutterWidth)) / columns).toFixed(2);
+		log(columns);
+		log(columnsWidth);
+		log(gutterWidth);
 	}else{
 		gridWidth = userDefaults.objectForKey("gridWidth");
 		columns = userDefaults.objectForKey("columns");
@@ -36,8 +39,19 @@ function setColumns(val){
     var columnGaps = val - 1;
     var columnWidth = (val * oneColumn) + (columnGaps * gutterWidth);
 
+
+		/** Todo: Update Column Sizing to new API **/
 		for(var i = 0 ; i < layers.length ; ++i){
     	layers[i].frame().width = columnWidth;
+		}
+
+		var sketch = require('sketch/dom');
+		var document = sketch.Document.getSelectedDocument();
+		var selection = document.selectedLayers;
+
+		for(var i = 0 ; i < selection.layers.length ; ++i){
+			var layer = selection.layers[i];
+			updateParentFrames(layer);
 		}
 
     return;
@@ -116,27 +130,6 @@ var columnsSet12 = function(context) {
 |--------------------------------------------------------------------------
 */
 
-function alignColumns(val){
-	var col1_x = Number((artboardWidth - gridWidth) / 2);
-	var xLoc;
-	
-	if(val == 1){
-		xLoc = col1_x;
-	}else{
-		xLoc = (columnsWidth + gutterWidth) * (val - 1) + col1_x;
-	}
-
-	var sketch = require('sketch/dom');
-	var document = sketch.Document.getSelectedDocument();
-	var selection = document.selectedLayers;
-
-	for(var i = 0 ; i < selection.layers.length ; ++i){
-		var layer = selection.layers[i];
-		var layerY = layer.frame.y;
-		positionInArtboard(layer, xLoc, layerY);
-	}
-}
-
 var columnsAlign1 = function(context){
 	setVariables(context);
 	alignColumns(1);
@@ -196,6 +189,32 @@ var columnsAlign12 = function(context){
 	setVariables(context);
 	alignColumns(12);
 };
+
+function alignColumns(val){
+	var col1_x = Number((artboardWidth - gridWidth) / 2);
+	var xLoc;
+
+	if(val == 1){
+		xLoc = col1_x;
+	}else{
+		xLoc = (columnsWidth + gutterWidth) * (val - 1) + col1_x;
+	}
+
+	var sketch = require('sketch/dom');
+	var document = sketch.Document.getSelectedDocument();
+	var selection = document.selectedLayers;
+
+	for(var i = 0 ; i < selection.layers.length ; ++i){
+		var layer = selection.layers[i];
+		if(layer.parent.type == 'Group'){
+			var layerY = parentOffsetInArtboard(layer).y;
+		}else{
+			var layerY = layer.frame.y;
+		}
+
+		positionInArtboard(layer, xLoc, layerY);
+	}
+}
 
 /**
  Move the selected layer to x & y coordinates relative to the artboard
