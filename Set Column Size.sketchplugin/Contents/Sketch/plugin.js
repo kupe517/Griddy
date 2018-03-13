@@ -33,6 +33,18 @@ function setVariables(context){
 	[userDefaults setObject:oneColumn forKey:"oneColumn"];
 	userDefaults.synchronize();
 
+  /** Variables
+	log('artboard :' + artboard);
+	log('artboardWidth :' + artboardWidth);
+	log('layoutGrid :' + layoutGrid);
+	log('gridWidth :' + gridWidth);
+	log('columns :' + columns);
+	log('columnsWidth :' + columnsWidth);
+	log('gutterWidth :' + gutterWidth);
+	log('oneColumn :' + oneColumn);
+	log('layers :' + layers);
+	**/
+
 }
 
 function setColumns(val){
@@ -194,11 +206,15 @@ function alignColumns(val){
 	var col1_x = Number((artboardWidth - gridWidth) / 2);
 	var xLoc;
 
+	log('col1_x :' + col1_x);
+
 	if(val == 1){
 		xLoc = col1_x;
 	}else{
-		xLoc = (columnsWidth + gutterWidth) * (val - 1) + col1_x;
+		xLoc = (+columnsWidth + +gutterWidth) * (+val - 1) + +col1_x;
 	}
+
+	log('xLoc :' + xLoc);
 
 	var sketch = require('sketch/dom');
 	var document = sketch.Document.getSelectedDocument();
@@ -206,11 +222,14 @@ function alignColumns(val){
 
 	for(var i = 0 ; i < selection.layers.length ; ++i){
 		var layer = selection.layers[i];
+		log('layerY:' + layer.frame.y)
 		if(layer.parent.type == 'Group'){
 			var layerY = parentOffsetInArtboard(layer).y;
 		}else{
 			var layerY = layer.frame.y;
 		}
+
+		log('layerYCalculated:' + layerY);
 
 		positionInArtboard(layer, xLoc, layerY);
 	}
