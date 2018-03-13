@@ -98,6 +98,22 @@
 		},
 		{
 			"script": "plugin.js",
+			"name": "Size to Artboard Width",
+			"handlers": {
+				"run": "columnsSetArtboardWidth"
+			},
+			"identifier": "columnsSetArtboardWidth"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Align to Artboard Start",
+			"handlers": {
+				"run": "columnsAlign0"
+			},
+			"identifier": "columnsAlign0"
+		},
+		{
+			"script": "plugin.js",
 			"name": "Align to Column 1",
 			"handlers": {
 				"run": "columnsAlign1"
@@ -210,7 +226,8 @@
 									"columnsSet9",
 									"columnsSet10",
 									"columnsSet11",
-									"columnsSet12"
+									"columnsSet12",
+									"columnsSetArtboardWidth"
 								]
 						},
 						{
@@ -227,7 +244,8 @@
 									"columnsAlign9",
 									"columnsAlign10",
 									"columnsAlign11",
-									"columnsAlign12"
+									"columnsAlign12",
+									"columnsAlign0"
 								]
 						}
 					]
