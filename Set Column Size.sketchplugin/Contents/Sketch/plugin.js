@@ -206,7 +206,7 @@ function alignColumns(val){
 	var col1_x = Number((artboardWidth - gridWidth) / 2);
 	var xLoc;
 
-	log('col1_x :' + col1_x);
+	//log('col1_x :' + col1_x);
 
 	if(val == 1){
 		xLoc = col1_x;
@@ -214,7 +214,7 @@ function alignColumns(val){
 		xLoc = (+columnsWidth + +gutterWidth) * (+val - 1) + +col1_x;
 	}
 
-	log('xLoc :' + xLoc);
+	//log('xLoc :' + xLoc);
 
 	var sketch = require('sketch/dom');
 	var document = sketch.Document.getSelectedDocument();
@@ -222,14 +222,15 @@ function alignColumns(val){
 
 	for(var i = 0 ; i < selection.layers.length ; ++i){
 		var layer = selection.layers[i];
-		log('layerY:' + layer.frame.y)
+		//log('layerY:' + layer.frame.y)
 		if(layer.parent.type == 'Group'){
-			var layerY = parentOffsetInArtboard(layer).y;
+			var groupY = layer.frame.y;
+			var layerY = parentOffsetInArtboard(layer).y + groupY;
 		}else{
 			var layerY = layer.frame.y;
 		}
 
-		log('layerYCalculated:' + layerY);
+		//log('layerYCalculated:' + layerY);
 
 		positionInArtboard(layer, xLoc, layerY);
 	}
@@ -250,6 +251,7 @@ function parentOffsetInArtboard (layer) {
     offset.x += parent.frame.x;
     offset.y += parent.frame.y;
     parent = parent.parent;
+		// log('offset:' + offset.y);
   }
   return offset;
 }
