@@ -69,6 +69,12 @@ function setColumns(val){
     return;
 }
 
+function setArtboardWidth(){
+	for(var i = 0 ; i < layers.length ; ++i){
+		layers[i].frame().width = artboardWidth;
+	}
+}
+
 /*
 |--------------------------------------------------------------------------
 | Object Sizing
@@ -135,12 +141,22 @@ var columnsSet12 = function(context) {
 	setColumns(12);
 };
 
+var columnsSetArtboardWidth = function(context) {
+	setVariables(context);
+	setArtboardWidth();
+};
+
 
 /*
 |--------------------------------------------------------------------------
 | Object Alignment
 |--------------------------------------------------------------------------
 */
+
+var columnsAlign0 = function(context){
+	setVariables(context);
+	alignColumns(0);
+};
 
 var columnsAlign1 = function(context){
 	setVariables(context);
@@ -202,6 +218,7 @@ var columnsAlign12 = function(context){
 	alignColumns(12);
 };
 
+
 function alignColumns(val){
 	var col1_x = Number((artboardWidth - gridWidth) / 2);
 	var xLoc;
@@ -210,7 +227,10 @@ function alignColumns(val){
 
 	if(val == 1){
 		xLoc = col1_x;
-	}else{
+	}else if(val == 0){
+		xLoc = 0;
+	}
+	else{
 		xLoc = (+columnsWidth + +gutterWidth) * (+val - 1) + +col1_x;
 	}
 
