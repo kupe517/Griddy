@@ -4,7 +4,7 @@
 			"script": "plugin.js",
 			"name": "Size to 1 Column",
 			"handlers": {
-				"run": "columnsSet1"
+				"run": "resizeColumns"
 			},
 			"identifier": "columnsSet1"
 		},
@@ -12,7 +12,7 @@
 			"script": "plugin.js",
 			"name": "Size to 2 Columns",
 			"handlers": {
-				"run": "columnsSet2"
+				"run": "resizeColumns"
 			},
 			"identifier": "columnsSet2"
 		},
@@ -20,7 +20,7 @@
 			"script": "plugin.js",
 			"name": "Size to 3 Columns",
 			"handlers": {
-				"run": "columnsSet3"
+				"run": "resizeColumns"
 			},
 			"identifier": "columnsSet3"
 		},
@@ -28,7 +28,7 @@
 			"script": "plugin.js",
 			"name": "Size to 4 Columns",
 			"handlers": {
-				"run": "columnsSet4"
+				"run": "resizeColumns"
 			},
 			"identifier": "columnsSet4"
 		},
@@ -36,7 +36,7 @@
 			"script": "plugin.js",
 			"name": "Size to 5 Columns",
 			"handlers": {
-				"run": "columnsSet5"
+				"run": "resizeColumns"
 			},
 			"identifier": "columnsSet5"
 		},
@@ -44,7 +44,7 @@
 			"script": "plugin.js",
 			"name": "Size to 6 Columns",
 			"handlers": {
-				"run": "columnsSet6"
+				"run": "resizeColumns"
 			},
 			"identifier": "columnsSet6"
 		},
@@ -52,7 +52,7 @@
 			"script": "plugin.js",
 			"name": "Size to 7 Columns",
 			"handlers": {
-				"run": "columnsSet7"
+				"run": "resizeColumns"
 			},
 			"identifier": "columnsSet7"
 		},
@@ -60,7 +60,7 @@
 			"script": "plugin.js",
 			"name": "Size to 8 Columns",
 			"handlers": {
-				"run": "columnsSet8"
+				"run": "resizeColumns"
 			},
 			"identifier": "columnsSet8"
 		},
@@ -68,7 +68,7 @@
 			"script": "plugin.js",
 			"name": "Size to 9 Columns",
 			"handlers": {
-				"run": "columnsSet9"
+				"run": "resizeColumns"
 			},
 			"identifier": "columnsSet9"
 		},
@@ -76,7 +76,7 @@
 			"script": "plugin.js",
 			"name": "Size to 10 Columns",
 			"handlers": {
-				"run": "columnsSet10"
+				"run": "resizeColumns"
 			},
 			"identifier": "columnsSet10"
 		},
@@ -84,7 +84,7 @@
 			"script": "plugin.js",
 			"name": "Size to 11 Columns",
 			"handlers": {
-				"run": "columnsSet11"
+				"run": "resizeColumns"
 			},
 			"identifier": "columnsSet11"
 		},
@@ -92,7 +92,7 @@
 			"script": "plugin.js",
 			"name": "Size to 12 Columns",
 			"handlers": {
-				"run": "columnsSet12"
+				"run": "resizeColumns"
 			},
 			"identifier": "columnsSet12"
 		},
@@ -108,7 +108,7 @@
 			"script": "plugin.js",
 			"name": "Align to Artboard Start",
 			"handlers": {
-				"run": "columnsAlign0"
+				"run": "setAlignment"
 			},
 			"identifier": "columnsAlign0"
 		},
@@ -116,7 +116,7 @@
 			"script": "plugin.js",
 			"name": "Align to Column 1",
 			"handlers": {
-				"run": "columnsAlign1"
+				"run": "setAlignment"
 			},
 			"identifier": "columnsAlign1"
 		},
@@ -124,7 +124,7 @@
 			"script": "plugin.js",
 			"name": "Align to Column 2",
 			"handlers": {
-				"run": "columnsAlign2"
+				"run": "setAlignment"
 			},
 			"identifier": "columnsAlign2"
 		},
@@ -132,7 +132,7 @@
 			"script": "plugin.js",
 			"name": "Align to Column 3",
 			"handlers": {
-				"run": "columnsAlign3"
+				"run": "setAlignment"
 			},
 			"identifier": "columnsAlign3"
 		},
@@ -140,7 +140,7 @@
 			"script": "plugin.js",
 			"name": "Align to Column 4",
 			"handlers": {
-				"run": "columnsAlign4"
+				"run": "setAlignment"
 			},
 			"identifier": "columnsAlign4"
 		},
@@ -148,7 +148,7 @@
 			"script": "plugin.js",
 			"name": "Align to Column 5",
 			"handlers": {
-				"run": "columnsAlign5"
+				"run": "setAlignment"
 			},
 			"identifier": "columnsAlign5"
 		},
@@ -156,7 +156,7 @@
 			"script": "plugin.js",
 			"name": "Align to Column 6",
 			"handlers": {
-				"run": "columnsAlign6"
+				"run": "setAlignment"
 			},
 			"identifier": "columnsAlign6"
 		},
@@ -164,7 +164,7 @@
 			"script": "plugin.js",
 			"name": "Align to Column 7",
 			"handlers": {
-				"run": "columnsAlign7"
+				"run": "setAlignment"
 			},
 			"identifier": "columnsAlign7"
 		},
@@ -172,7 +172,7 @@
 			"script": "plugin.js",
 			"name": "Align to Column 8",
 			"handlers": {
-				"run": "columnsAlign8"
+				"run": "setAlignment"
 			},
 			"identifier": "columnsAlign8"
 		},
@@ -180,7 +180,7 @@
 			"script": "plugin.js",
 			"name": "Align to Column 9",
 			"handlers": {
-				"run": "columnsAlign9"
+				"run": "setAlignment"
 			},
 			"identifier": "columnsAlign9"
 		},
@@ -188,7 +188,7 @@
 			"script": "plugin.js",
 			"name": "Align to Column 10",
 			"handlers": {
-				"run": "columnsAlign10"
+				"run": "setAlignment"
 			},
 			"identifier": "columnsAlign10"
 		},
@@ -196,7 +196,7 @@
 			"script": "plugin.js",
 			"name": "Align to Column 11",
 			"handlers": {
-				"run": "columnsAlign11"
+				"run": "setAlignment"
 			},
 			"identifier": "columnsAlign11"
 		},
@@ -204,9 +204,41 @@
 			"script": "plugin.js",
 			"name": "Align to Column 12",
 			"handlers": {
-				"run": "columnsAlign12"
+				"run": "setAlignment"
 			},
 			"identifier": "columnsAlign12"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Center Layout",
+			"handlers": {
+				"run": "centerLayout"
+			},
+			"identifier": "centerLayout"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Set Layout 960px",
+			"handlers": {
+				"run": "setLayout"
+			},
+			"identifier": "layout960"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Set Layout 1260px",
+			"handlers": {
+				"run": "setLayout"
+			},
+			"identifier": "layout1260"
+		},
+		{
+			"script": "plugin.js",
+			"name": "Set Layout 335px",
+			"handlers": {
+				"run": "setLayout"
+			},
+			"identifier": "layout335"
 		}
 	],
 	"menu": {
@@ -246,6 +278,15 @@
 									"columnsAlign11",
 									"columnsAlign12",
 									"columnsAlign0"
+								]
+						},
+						{
+                "title": "Layout Settings",
+                "items": [
+									"centerLayout",
+									"layout335",
+									"layout960",
+									"layout1260"
 								]
 						}
 					]
